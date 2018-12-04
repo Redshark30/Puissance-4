@@ -13,12 +13,15 @@ import java.awt.Color;
  */
 public class Puissance4 extends javax.swing.JFrame {
 
+    static String joueur1;
+    static String joueur2;
+    
     /**
      * Creates new form Puissance4
      */
     public Puissance4() {
         initComponents();
-        jButton1.setEnabled(false);    }
+        jButton1.setEnabled(true);    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,14 +59,20 @@ public class Puissance4 extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
         jLabel3.setText("Saisissez le nom du joueur 2 :");
 
-        jTextField1.setText("______________");
+        jTextField1.setPreferredSize(new java.awt.Dimension(150, 30));
+        jTextField1.setSize(new java.awt.Dimension(100, 200));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("______________");
+        jTextField2.setPreferredSize(new java.awt.Dimension(150, 30));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,7 +95,7 @@ public class Puissance4 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(256, 256, 256)
                         .addComponent(jButton1)))
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,22 +112,28 @@ public class Puissance4 extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jButton1)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        jLabel2.setText("test");
-        jButton1.setBackground(Color.red);
-        
+        //jLabel2.setText("test");
+        //jButton1.setBackground(Color.red);
+        joueur1 = jTextField1.getText();
+        joueur2 = jTextField2.getText();
+        MainP4 mainp4 = new MainP4();
+        mainp4.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     /**
      * @param args the command line arguments
