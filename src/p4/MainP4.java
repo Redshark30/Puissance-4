@@ -121,7 +121,7 @@ public class MainP4 extends javax.swing.JFrame {
 
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ActionPerformed(evt);
             }
         });
 
@@ -187,7 +187,7 @@ public class MainP4 extends javax.swing.JFrame {
 
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                ActionPerformed(evt);
             }
         });
 
@@ -575,12 +575,6 @@ public class MainP4 extends javax.swing.JFrame {
         return false;
     }
     
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
